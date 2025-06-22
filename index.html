@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fardeen Ali - DevOps Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 20, 0.7), rgba(0, 0, 20, 0.7)), url('images/IMG_2424.jpg') no-repeat center 40%/cover;
+            /* Changed from center 25% to center 40% to better position the face */
+            color: white;
+            padding: 0 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #fff, #a3a3a3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .intro {
+            font-size: 1.8em;
+            color: #4CAF50;
+            letter-spacing: 1px;
+        }
+
+        .summary {
+            font-size: 1.2em;
+            margin-top: 20px;
+            padding: 40px;
+            background: rgba(0, 0, 32, 0.95);
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .skills-section,
+        .experience-section,
+        .projects-section {
+            padding: 80px 20px;
+            background: rgba(0, 0, 32, 0.95);
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .skills-section h2,
+        .experience-section h2,
+        .projects-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .skills-container,
+        .experience-container,
+        .projects-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .skill-card,
+        .experience-card,
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .experience-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 10px;
+            padding: 30px;
+            width: 350px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .experience-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+
+        .experience-card .company {
+            font-size: 1.2em;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .experience-card .period {
+            font-size: 1em;
+            color: #a3a3a3;
+            margin-bottom: 15px;
+        }
+
+        .skill-card:hover,
+        .experience-card:hover,
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .skill-card img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+        }
+
+        .project-card img {
+            width: 80px;
+            height: 80px;
+            margin: 20px auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card img:hover {
+            transform: rotate(360deg);
+        }
+
+        .contact-section {
+            padding: 80px 20px;
+            background: rgba(0, 0, 32, 0.95);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .contact-form button {
+            padding: 15px 40px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 20, 1);
+            color: white;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1 class="fade-in">Fardeen Ali</h1>
+            <p class="intro fade-in">DevOps Engineer | Cloud Enthusiast | Automation Expert</p>
+        </div>
+    </header>
+
+    <!-- Professional Summary Section -->
+    <section class="summary fade-in">
+        <p>
+            I am a passionate DevOps Engineer with hands-on experience in building scalable infrastructure,
+            automating processes, and improving system reliability. I specialize in CI/CD pipelines, containerization
+            (Docker), Kubernetes, cloud platforms (Azure, AWS), and Infrastructure as Code (Terraform). I am highly
+            skilled in monitoring solutions such as Prometheus and Grafana, and I am committed to enhancing operational
+            efficiency through automation and observability.
+        </p>
+    </section>
+
+    <!-- Key Skills Section -->
+    <section class="skills-section fade-in">
+        <h2>Key Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure">
+                <h3>Azure</h3>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+                <h3>Docker</h3>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+                    alt="Kubernetes">
+                <h3>Kubernetes</h3>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg"
+                    alt="Terraform">
+                <h3>Terraform</h3>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg"
+                    alt="Ansible">
+                <h3>Ansible</h3>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg"
+                    alt="Prometheus">
+                <h3>Prometheus</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section class="experience-section fade-in">
+        <h2>Professional Experience</h2>
+        <div class="experience-container">
+            <div class="experience-card">
+                <h3>Integrated Command Centre Lead</h3>
+                <p class="company">HCL Technologies</p>
+                <p class="period">January 2022 - Present</p>
+                <ul>
+                    <li>Reduced incident response time by 30% using Nagios, Dynatrace, and Prometheus.</li>
+                    <li>Led automation initiatives for ServiceNow event correlation and reduced alert noise by 50%.</li>
+                    <li>Integrated enterprise-level monitoring tools to enhance system observability and SLAs.</li>
+                </ul>
+            </div>
+            <div class="experience-card">
+                <h3>IT Analyst</h3>
+                <p class="company">MM9 Information Technologies</p>
+                <p class="period">April 2021 - October 2021</p>
+                <ul>
+                    <li>Ensured 99.9% system uptime by proactively monitoring production environments.</li>
+                    <li>Collaborated with cross-functional teams to resolve high-severity incidents.</li>
+                    <li>Maintained detailed incident logs and root cause analysis (RCA) for process improvements.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section fade-in">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="WeatherHub">
+                <h3>WeatherHub</h3>
+                <p>Designed and deployed a microservices platform using Kubernetes and Docker to reduce latency by 40%.
+                </p>
+                <a href="https://github.com/Fardeen2812/WeatherHub-.git" target="_blank"
+                    style="color: #333; text-decoration: none; display: inline-block; margin-top: 10px;">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                        alt="GitHub" style="width: 24px; height: 24px; vertical-align: middle;">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2>Contact Me</h2>
+        <form class="contact-form" action="https://formsubmit.co/fardeen.ctps@gmail.com" method="POST">
+            <!-- Honeypot -->
+            <input type="text" name="_honey" style="display:none">
+
+            <!-- Disable Captcha -->
+            <input type="hidden" name="_captcha" value="false">
+
+            <!-- Success Page -->
+            <input type="hidden" name="_next" value="https://fardeen2812.github.io/thanks.html">
+
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Connect with me:</p>
+        <a href="https://github.com/Fardeen2812" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/fardeen-aliii" target="_blank">LinkedIn</a>
+    </footer>
+
+    <script>
+        // Add animation on scroll for fading elements in
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeInElements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            fadeInElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+
+</html>
